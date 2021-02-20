@@ -1,0 +1,40 @@
+﻿@model IEnumerable<LarnSQLQuery.View.DatabaseView2>
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.categoryID)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.categoryName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.totalproduct)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelitem => item.categoryID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.categoryName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.totalproduct)
+                </td>
+
+            </tr>
+        }
+    </tbody>
+
+</table>
